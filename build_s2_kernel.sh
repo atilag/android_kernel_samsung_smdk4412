@@ -3,7 +3,7 @@ export KERNELDIR=`readlink -f .`
 export INITRAMFS_SOURCE=`readlink -f $KERNELDIR/../initramfs-i9100-jb-dual-boot-b2g`
 export PARENT_DIR=`readlink -f ..`
 export USE_SEC_FIPS_MODE=true
-export CROSS_COMPILE=/home/jgomez/b2g/build/prebuilt/linux-x86/toolchain/arm-eabi-4.4.3/bin/arm-eabi-
+export CROSS_COMPILE=/home/jgomez/b2g/build/prebuilts/gcc/linux-x86/arm/arm-eabi-4.7/bin/arm-eabi-
 
 if [ "${1}" != "" ];then
   export KERNELDIR=`readlink -f ${1}`
