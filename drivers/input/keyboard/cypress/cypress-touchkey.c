@@ -64,7 +64,7 @@ static int touchkey_keycode[] = { 0,
 	KEY_MENU, KEY_ENTER, KEY_BACK, KEY_END,
 
 #elif defined(TK_USE_4KEY_TYPE_NA)
-	KEY_SEARCH, KEY_BACK, KEY_HOMEPAGE, KEY_MENU,
+	KEY_SEARCH, KEY_BACK, KEY_HOME, KEY_MENU,
 
 #elif defined(TK_USE_2KEY_TYPE_M0)
 	KEY_BACK, KEY_MENU,
@@ -324,7 +324,7 @@ static ssize_t set_touchkey_autocal_testmode(struct device *dev,
 			tkey_i2c->pdata->power_on(1);
 			msleep(50);
 #if defined(TK_HAS_AUTOCAL)
-			touchkey_autocalibration();
+			touchkey_autocalibration(tkey_i2c);
 #endif
 		}
 	} else {
