@@ -33,8 +33,7 @@ find $INITRAMFS_TMP -name ".git*" -exec rm -rf {} \;
 #remove empty directory placeholders
 find $INITRAMFS_TMP -name EMPTY_DIRECTORY -exec rm -rf {} \;
 rm -rf $INITRAMFS_TMP/tmp/*
-#remove git repository
-rm -rf $INITRAMFS_TMP/.git
+rm -rf $INITRAMFS_TMP/READNE.md
 #copy modules into initramfs
 mkdir -p $INITRAMFS/lib/modules
 find -name '*.ko' -exec cp -av {} $INITRAMFS_TMP/lib/modules/ \;
